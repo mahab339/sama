@@ -22,3 +22,6 @@ Supported formulas and syntax:
 ## TODO
 * Enhance the website frontend.
 * Add history feature, for previously inserted calculations.
+* Support more formulas.
+
+<small>Licensed under GPL.

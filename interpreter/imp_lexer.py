@@ -20,19 +20,19 @@ token_exprs = [
     (r'\*',         MUL),
     (r'/',          DIV),
 
-    (r'\(\s*P\s*\|\s*F,', PgF),
-    (r'\(\s*F\s*\|\s*P,', FgP),
+    (r'(?i)\(\s*P\s*(\||\/)\s*F,', PgF),
+    (r'(?i)\(\s*F\s*(\||\/)\s*P,', FgP),
 
-    (r'\(\s*F\s*\|\s*A,', FgA),
-    (r'\(\s*A\s*\|\s*F,', AgF),
+    (r'(?i)\(\s*F\s*(\||\/)\s*A,', FgA),
+    (r'(?i)\(\s*A\s*(\||\/)\s*F,', AgF),
 
-    (r'\(\s*P\s*\|\s*A,', PgA),
-    (r'\(\s*A\s*\|\s*P,', AgP),
+    (r'(?i)\(\s*P\s*(\||\/)\s*A,', PgA),
+    (r'(?i)\(\s*A\s*(\||\/)\s*P,', AgP),
 
-    (r'\(\s*P\s*\|\s*G,', PgG),
-    (r'\(\s*A\s*\|\s*G,', AgG),
+    (r'(?i)\(\s*P\s*(\||\/)\s*G,', PgG),
+    (r'(?i)\(\s*A\s*(\||\/)\s*G,', AgG),
 
-    (r'\(\s*P\s*\|\s*A1,',PgA1),
+    (r'(?i)\(\s*P\s*(\||\/)\s*A1,',PgA1),
 
     (r'\(',         LPAREN),
     (r'\)',         RPAREN),
