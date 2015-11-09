@@ -4,7 +4,7 @@
     ~~~~~~~~~~~~~~~
 
     :copyright: (c) 2015 by Mohab Hassan.
-    :license: BSD, see LICENSE for more details.
+    :license: GPL.
 """
 from interpreter.interpreter import Interpreter
 from interpreter.imp_lexer import *
