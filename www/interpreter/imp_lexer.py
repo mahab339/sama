@@ -1,4 +1,4 @@
-import lexer
+from . import lexer
 
 NUMBER = 'NUMBER'
 MINUS, PLUS, MUL, DIV = 'MINUS', 'PLUS', 'MUL', 'DIV'
@@ -20,19 +20,19 @@ token_exprs = [
     (r'\*',         MUL),
     (r'/',          DIV),
 
-    (r'(?i)\(\s*P\s*(\||\/)\s*F,', PgF),
-    (r'(?i)\(\s*F\s*(\||\/)\s*P,', FgP),
+    (r'(?i)\(\s*P\s*(\||\/|\\)\s*F,', PgF),
+    (r'(?i)\(\s*F\s*(\||\/|\\)\s*P,', FgP),
 
-    (r'(?i)\(\s*F\s*(\||\/)\s*A,', FgA),
-    (r'(?i)\(\s*A\s*(\||\/)\s*F,', AgF),
+    (r'(?i)\(\s*F\s*(\||\/|\\)\s*A,', FgA),
+    (r'(?i)\(\s*A\s*(\||\/|\\)\s*F,', AgF),
 
-    (r'(?i)\(\s*P\s*(\||\/)\s*A,', PgA),
-    (r'(?i)\(\s*A\s*(\||\/)\s*P,', AgP),
+    (r'(?i)\(\s*P\s*(\||\/|\\)\s*A,', PgA),
+    (r'(?i)\(\s*A\s*(\||\/|\\)\s*P,', AgP),
 
-    (r'(?i)\(\s*P\s*(\||\/)\s*G,', PgG),
-    (r'(?i)\(\s*A\s*(\||\/)\s*G,', AgG),
+    (r'(?i)\(\s*P\s*(\||\/|\\)\s*G,', PgG),
+    (r'(?i)\(\s*A\s*(\||\/|\\)\s*G,', AgG),
 
-    (r'(?i)\(\s*P\s*(\||\/)\s*A1,',PgA1),
+    (r'(?i)\(\s*P\s*(\||\/|\\)\s*A1,',PgA1),
 
     (r'\(',         LPAREN),
     (r'\)',         RPAREN),
