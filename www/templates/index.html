@@ -1,0 +1,131 @@
+<style>
+textarea{
+  border:3px solid #00A388;
+}
+
+
+html,body {
+  padding:0;
+  margin:0;
+	background:#fafafa;
+	text-align:center;
+}
+
+body {
+  padding-top:1em;
+  font-family:sans-serif;
+}
+
+h1, h2 {
+  font-family:sans-serif;
+  color:#666;
+}
+
+.sama {
+	position:relative;
+	border:0;
+	margin:0;
+	padding:0;
+	cursor:pointer;
+	font-size:1rem;
+	font-weight:bold;
+	background:transparent;
+	border-radius:.25rem;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+}
+
+.btn {
+  position:relative;
+	border:0;
+	margin:10px;
+	padding:0;
+	cursor:pointer;
+	font-size:1rem;
+	font-weight:bold;
+	color:#fff;
+	background:#FF5538;
+	border-radius:.25rem;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  content:attr(data-label);
+}
+
+.sama,
+.sama:after,
+.sama:before {
+	padding:.6875rem 2rem;
+}
+
+.sama:after,
+.sama:before {
+	position:absolute;
+
+}
+
+button:before {
+	z-index:2;
+}
+
+small{
+  font-size: 0.6em;
+}
+
+div{
+  line-height: 1.5;
+}
+</style>
+
+{% extends "layout.html" %}
+{% block body %}
+<script type="text/javascript">
+  $(function() {
+    var submit_form = function(e) {
+      $.getJSON($SCRIPT_ROOT + '/_add_numbers', {
+        a: $('textarea[name="a"]').val(),
+      }, function(data) {
+        $('#result').text("result = "+data.result);
+        $('textarea[name=a]').focus().select();
+      });
+      return false;
+    };
+
+    $('button#calculate').bind('click', submit_form);
+
+    $('textarea[type=text]').bind('keydown', function(e) {
+      if (e.keyCode == 13) {
+        submit_form(e);
+      }
+    });
+
+    $('input[name=a]').focus();
+  });
+</script>
+<h1>Sama Calculator  <sup><small><a href="https://github.com/mohabh/sama">On GitHub</a></small></sup></h1>
+<h2> Engineering Economic Analysis - Calculator Interpreter</h2>
+<p class="sama">
+  <textarea  rows="4" cols="50" name="a" placeholder="Write your formulas here"></textarea>
+</p>
+  <div class="sama">
+    <span  style="color:black" id="result"></span>
+  </div>
+  <button id="calculate" class="btn sama" type="button">Clac.</button>
+
+
+<div>
+  Example: <br/>(20000(P|A, 15%, 2) + 25000(P|A, 0.15, 3)(P|F, 15%, 2)) * (A|P, 15%, 5) = 22575.128779613286
+<div/>
+<div class="sama">
+  Supported formulas:<br/>
+  (F|P, i, n)<br/>
+  (P|F, i, n)<br/>
+  (F|A, i, n)<br/>
+  (A|F, i, n)<br/>
+  (P|A, i, n)<br/>
+  (A|P, i, n)<br/>
+  (P|G, i, N)<br/>
+  (A|G, i, N)<br/>
+  (P|A1, g, i, N)<br/>
+</div>
+<br/>
+{% endblock %}
