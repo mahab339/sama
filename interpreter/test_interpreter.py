@@ -60,6 +60,30 @@ class TestLexerImp(unittest.TestCase):
         expr = '7 + (((3 + 2)))'
         self.assertEqual(calc_result(expr), 12)
 
+    def test_starts_with_minus1(self):
+        expr = '-4 + 124'
+        self.assertEqual(calc_result(expr), 120)
+
+    def test_starts_with_minus2(self):
+        expr = '-14 + 2 * 3 - 6 / 2'
+        self.assertEqual(calc_result(expr), -11)
+
+    def test_starts_with_minus3(self):
+        expr = '-7 + 3 * (10 / (12 / (3 + -1) - 1))'
+        self.assertEqual(calc_result(expr), -1)
+
+    def test_sequence_of_signs1(self):
+        expr = '-4 + 124'
+        self.assertEqual(calc_result(expr), 120)
+
+    def test_sequence_of_signs2(self):
+        expr = '-14 +- 2 * +3 - 6 / 2'
+        self.assertEqual(calc_result(expr), -23)
+
+    def test_sequence_of_signs3(self):
+        expr = '-7 + 3 * (10 / (12 / (3 + -1) - --1))'
+        self.assertEqual(calc_result(expr), -1)
+
 
     def test_percent1(self):
         expr = '33%'

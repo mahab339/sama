@@ -62,6 +62,14 @@ class Interpreter(object):
             result = self.expr()
             self.eat(RPAREN)
             return result
+        elif token.type in (PLUS, MINUS):
+            if token.type == PLUS:
+                self.eat(PLUS)
+                return self.factor()
+            else:
+                self.eat(MINUS)
+                return 0 - self.factor()
+
 
     def term(self):
         """term : factor ((MUL | DIV | FgP) factor)*"""
