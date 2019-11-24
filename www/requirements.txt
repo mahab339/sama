@@ -1,7 +1,7 @@
 Flask==0.10.1
 Jinja2==2.8
 MarkupSafe==0.23
-PyYAML==3.11
+PyYAML==5.1
 Werkzeug==0.10.4
 awsebcli==3.5.5
 blessed==1.9.5
