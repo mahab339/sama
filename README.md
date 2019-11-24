@@ -3,7 +3,7 @@ Engineering Economic Analysis - Calculator Interpreter.
 
 Sama is an interpreter for discrete compounding formulas with discrete payments.
 
-A simple user interface (in www folder) is hosted at http://sama.elasticbeanstalk.com/
+A simple user interface (in www folder) <s> is hosted at http://sama.elasticbeanstalk.com/ </s>
 
 You can calculate long calculations at once, for example: <br>(20000(P|A, 15%, 2) + 25000(P|A, 0.15, 3)(P|F, 15%, 2)) * (A|P, 15%, 5) = 22575.128779613286
 
