@@ -1,6 +1,6 @@
-from imp_lexer import *
-from lexer import Token
-import econ
+from .imp_lexer import *
+from .lexer import Token
+from . import econ
 
 class Interpreter(object):
     def __init__(self, lexer):

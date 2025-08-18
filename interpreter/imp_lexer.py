@@ -1,4 +1,4 @@
-import lexer
+from . import lexer
 
 NUMBER = 'NUMBER'
 MINUS, PLUS, MUL, DIV = 'MINUS', 'PLUS', 'MUL', 'DIV'
