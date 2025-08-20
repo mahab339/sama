@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Sama Calculator</string>
+    <string name="title_activity_main">Sama Calculator</string>
+    <string name="package_name">org.autostream.sama</string>
+    <string name="custom_url_scheme">org.autostream.sama</string>
+</resources>

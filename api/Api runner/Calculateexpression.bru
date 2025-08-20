@@ -1,0 +1,19 @@
+meta {
+  name: Calculateexpression
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseurl}}/api/calculate/
+  body: json
+  auth: inherit
+}
+
+headers {
+  sama-clientid: 6aeb9384-2b6d-46aa-95b2-127a431a7e7d
+}
+
+body:json {
+  {"expression": "20000*(P|A, 15%, 2)+1*(P|F, 15%, 2)"}
+}
