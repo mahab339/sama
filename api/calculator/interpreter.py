@@ -1,13 +1,5 @@
-import sys
-import os
-
-# Add the project root directory to Python path
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
-if project_root not in sys.path:
-    sys.path.append(project_root)
-
-# Import from the interpreter package
-from interpreter import imp_lex
+# This will now point to the actual interpreter package
+from interpreter.imp_lexer import imp_lex
 from interpreter.interpreter import Interpreter
 
 def calc_result(expr):

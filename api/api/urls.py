@@ -26,8 +26,8 @@ def get_swagger_schema():
         openapi.Info(
             title="Calculator API",
             default_version='v1',
-            description="API for performing engineering economic calculations",
-            terms_of_service="http://localhost:5173/privacy",
+            description="API to calculate interest factors and different economic formulas. It takes the formulas expression as-is, parse it, and calculates the result.",
+            terms_of_service="https://sama.up.railway.app/privacy",
             contact=openapi.Contact(email="malmezayen@outlook.com"),
             license=openapi.License(name="GPL License"),
         ),

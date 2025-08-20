@@ -1,27 +1,23 @@
-# sama
+# Sama calculator
 Engineering Economic Analysis - Calculator Interpreter.
 
-Sama is an interpreter for discrete compounding formulas with discrete payments.
+Calculator for interest factors and different economic formulas. It takes the formulas expression as-is, parse it, and calculates the result. The system has [an interpreter](./interpreter/) for discrete compounding formulas with discrete payments, along [a web site and a mobile app client](./clients/), and an [Rest api](./api/).
 
-A simple user interface (in www folder) <s> is hosted at http://sama.elasticbeanstalk.com/ </s>
+## Live deployments
+- Site: https://sama.up.railway.app/
+- Mobile app: https://play.google.com/store/apps/details?id=org.autostream.sama
+- Api: https://samaapi.up.railway.app/redoc/
 
-You can calculate long calculations at once, for example: <br>(20000(P|A, 15%, 2) + 25000(P|A, 0.15, 3)(P|F, 15%, 2)) * (A|P, 15%, 5) = 22575.128779613286
 
-Supported formulas and syntax:
-* (F|P, i, n)
-* (P|F, i, n)
-* (F|A, i, n)
-* (A|F, i, n)
-* (P|A, i, n)
-* (A|P, i, n)
-* (P|G, i, N)
-* (A|G, i, N)
-* (P|A1, g, i, N)
 
+## Supported formulas
+
+![Supported formulas](./clients/static/cache/expressions.webp)<br>
+Source: Park, Chan S., Fundamentals of Engineering Economics, 3rdEd., Prentice Hall (2013)
 
 ## TODO
-* Enhance the website frontend.
-* Add history feature, for previously inserted calculations.
+* <s>Enhance the website frontend.</s>
+* <s>Add history feature, for previously inserted calculations.</s>
 * Support more formulas.
 
 <small>Licensed under GPL.
