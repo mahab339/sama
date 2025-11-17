@@ -53,10 +53,12 @@
 		'Equal payments (Gradient): (A|G, i, N)',
 		'Present worth (Geometric Gradient): (P|A1, g, i, N)'
 	];
-
+	
+	// Import calculator function
+	import { calcexpression } from '../calculator.js';
+	
 	async function handleCalculate() {
 		errorMessage = ''; // Clear previous errors
-
 		if (!expression.trim()) {
 			errorMessage = 'Empty expression!';
 			result = '';
@@ -73,17 +75,12 @@
 			return
 		}
 		try {
-			const response = await Post('calculate', { Expression: expression });
-			if (response.errcode == 'Nointernet') {
-				errorMessage = 'No internet connection. Check please, your network connection.';
-				result = '';
-			} else if (response.failed) {
-				errorMessage =
-					JSON.stringify(response)
-					// "Failed to calculate the expression. Please make sure it's written correctly.";
+			// Use the imported calculator function
+			result = calcexpression(expression);
+            if (result === undefined || result === null || Number.isNaN(result)) {
+				errorMessage = 'Unknown result..';
 				result = '';
 			} else {
-				result = response.result || result;
 				// Add to history if not already there
 				if (!history.some((item) => item.expression === expression)) {
 					history = [
@@ -99,8 +96,8 @@
 				}
 			}
 		} catch (error) {
-			errorMessage = error;
-			console.error('Unexpected error:', error);
+			errorMessage = 'Unknown result..';
+				result = '';
 		}
 	}
 

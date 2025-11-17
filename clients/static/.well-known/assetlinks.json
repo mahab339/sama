@@ -1,0 +1,10 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "org.autostream.sama",
+        "sha256_cert_fingerprints": [
+          "3D:35:24:9E:00:88:CE:43:6A:13:4A:86:1B:CC:DB:AA:8E:2D:B3:7F:C7:8A:70:75:76:5D:A6:30:13:AB:A0:26"
+        ]
+      }
+    }]

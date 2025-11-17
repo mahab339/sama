@@ -36,9 +36,7 @@
             <div class="row g-3 text-center text-md-start">
                 <div class="col-12 col-md-4 order-md-2">
                     <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
-                        <a href="/mobile-apps" class="text-decoration-none text-muted">Mobile apps</a>
-                        <span class="d-none d-md-inline text-muted">|</span>
-                        <a href="https://samaapi.up.railway.app/redoc/" class="text-decoration-none text-muted">API</a>
+                        <a href="https://play.google.com/store/apps/details?id=org.autostream.sama&pcampaignid=web_share" class="text-decoration-none text-muted">Mobile apps</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 order-md-1">

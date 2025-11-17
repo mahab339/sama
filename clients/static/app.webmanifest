@@ -1,0 +1,22 @@
+{
+   "name": "Sama Calculator",
+   "short_name": "Sama Calc",
+   "start_url": "/",
+   "display": "standalone",
+   "background_color": "#ffffff",
+   "theme_color": "#007bff",
+   "icons": [
+     {
+       "src": "/favicon.png",
+       "sizes": "600x600",
+       "type": "image/png",
+       "purpose": "any maskable"
+     }
+   ],
+   "id": "sama-calculator",
+   "description": "A financial calculator for engineering economics problems",
+   "categories": ["finance", "education", "engineering"],
+   "lang": "en",
+   "dir": "ltr",
+   "orientation": "portrait"
+}
