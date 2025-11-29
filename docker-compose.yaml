@@ -1,25 +1,25 @@
 # Build webapp and systemapi images from corrosponding Docker files
-# 
+#
 # Run by `docker compose -f ./docker-compose.yaml up -d`
 
-networks:
-  appnet:
-    driver: bridge
+# networks:
+#   appnet:
+#     driver: bridge
 
 services:
-  samaapi:
-    image: samaapi:development
-    container_name: samaapi
-    ports:
-      - "8000:8000"
-    networks:
-      - appnet
-    
+#   samaapi:
+#     image: samaapi:development
+#     container_name: samaapi
+#     ports:
+#       - "8000:8000"
+#     networks:
+#       - appnet
+
   samawebclient:
-    image: samawebclient:development
+    image: samawebapp:stage
     container_name: samawebclient
     ports:
-      - "3000:3000"
-    networks:
-      - appnet
-      
+      - "3016:3000"
+    # networks:
+    #   - appnet
+

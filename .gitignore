@@ -10,7 +10,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+!clients/src/lib/
 lib64/
 parts/
 sdist/
@@ -19,10 +19,9 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-
+www/
 # Virtual Environment
 venv/
-flaskvenv/
 ENV/
 env/
 .env
@@ -37,6 +36,9 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# SvelteKit
+!clients/src/lib/
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -84,3 +86,4 @@ logs/
 # System Files
 .DS_Store
 Thumbs.db
+api/staticfiles/

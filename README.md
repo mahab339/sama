@@ -1,14 +1,11 @@
 # Sama calculator
 Engineering Economic Analysis - Calculator Interpreter.
 
-Calculator for interest factors and different economic formulas. It takes the formulas expression as-is, parse it, and calculates the result. The system has [an interpreter](./interpreter/) for discrete compounding formulas with discrete payments, along [a web site and a mobile app client](./clients/), and an [Rest api](./api/).
+Calculator for interest factors and different economic formulas. It takes the formulas expression as-is, parse it, and calculates the result. The system has [an interpreter](./interpreter/) for discrete compounding formulas with discrete payments, along [a web site and a mobile app client](./clients/), and an [Rest api](./api/). For the concise calculator script, take a look at [this Python script](./api/calculator/index.py) and [the JavaScript version](./api/calculator/calculator.js)
 
 ## Live deployments
-- Site: https://sama.up.railway.app/
+- Site: https://samacalculator.up.railway.app/
 - Mobile app: https://play.google.com/store/apps/details?id=org.autostream.sama
-- Api: https://samaapi.up.railway.app/redoc/
-
-
 
 ## Supported formulas
 

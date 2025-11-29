@@ -1,0 +1,50 @@
+{
+  "packageId": "org.autostream.sama",
+  "host": "samacalculator.up.railway.app",
+  "name": "Sama Calculator",
+  "launcherName": "Sama Calc",
+  "display": "standalone",
+  "themeColor": "#007BFF",
+  "themeColorDark": "#000000",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#FFFFFF",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://samacalculator.up.railway.app/favicon.svg",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "/home/mahab/Documents/sama/clients/android/app/samaandroidkey.jks",
+    "alias": "samadroidkey"
+  },
+  "appVersionName": "2",
+  "appVersionCode": 2,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://samacalculator.up.railway.app/app.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://samacalculator.up.railway.app/",
+  "minSdkVersion": 21,
+  "orientation": "portrait",
+  "fingerprints": [
+    {
+      "value": "03:66:53:8B:2C:C3:CA:75:90:FF:EB:2D:E8:85:2F:48:4C:07:D1:34:F3:46:EA:8E:3B:DC:0B:D2:FE:BC:0C:2D"
+    }
+  ],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "protocolHandlers": [],
+  "fileHandlers": [],
+  "launchHandlerClientMode": "",
+  "displayOverride": [],
+  "appVersion": "2"
+}
